@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Kontainer Kartu */
+.card-santri {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.card-santri:hover {
+  transform: translateY(-5px);
+}
+
+/* Header & Foto Profil */
+.card-header {
+  background: linear-gradient(135deg, #0d9488, #115e59);
+  height: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  object-fit: cover;
+  position: absolute;
+  bottom: -40px;
+  background-color: #e2e8f0;
+}
+
+/* Badan Kartu */
+.card-body {
+  padding: 50px 24px 24px 24px;
+  text-align: center;
+}
+
+.santri-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.santri-id {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.badge-halaqah {
+  display: inline-block;
+  background-color: #ccfbf1;
+  color: #0f766e;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/* Motto / Kutipan */
+.motto-box {
+  background-color: #f8fafc;
+  border-left: 3px solid #0d9488;
+  padding: 12px;
+  border-radius: 4px;
+  font-style: italic;
+  color: #475569;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Info Rincian (Grid) */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  text-align: left;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 16px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.info-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.card-body {
+  padding: 50px 24px 24px 24px;
+  text-align: center;
+}
+
+.footer {
+  display: flex; /* aktifkan flexbox */
+  justify-content: center; /* ratakan horizontal ke tengah */
+  align-items: center; /* ratakan vertical (kalau ada tinggi) */
+  gap: 20px; /* jarak antar link */
+  padding-left: 10px; /* beri ruang sedikit */
+}
+
+.footer a {
+    text-align: center;
+  text-decoration: none; /* hilangkan garis bawah */
+}
