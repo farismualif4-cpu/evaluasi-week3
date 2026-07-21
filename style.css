@@ -1,0 +1,39 @@
+/* BAGIAN 2: CSS Reset sederhana diletakkan di paling atas */
+  * {
+      margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* BAGIAN 1: Perbaikan #header-kantin (menambahkan # dan titik koma ;) */
+    #header-kantin {
+      background-color: #2c3e50;
+  color: white; /* Perbaikan: ditambahkan titik koma */
+  padding: 20px;
+} 
+
+/* BAGIAN 2: Selector elemen h2 */
+h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+/* BAGIAN 1: Perbaikan typo font-size dan penulisan titik dua pada line-height */
+.menu-item {
+  color: #333;
+  font-size: 16px;   /* Perbaikan: font-siz -> font-size */
+  line-height: 1.6;  /* Perbaikan: ditambahkan titik dua (:) */
+} 
+
+/* BAGIAN 2: Class khusus untuk menu favorit */
+.menu-favorit {
+  background-color: #c4df10;
+  font-weight: bold;
+}
+
+/* BAGIAN 1: Perbaikan #footer-kantin (menambahkan # dan perbaikan typo background-color) */
+#footer-kantin {
+  background-color: #f5f5f5; /* Perbaikan: backgrond-color -> background-color */
+  text-align: center;
+  padding: 16px;
+}
