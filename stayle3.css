@@ -1,0 +1,125 @@
+/* BAB 6: UNIVERSAL SELECTOR & BOX-SIZING */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Format Warna 1: HEX (#f4f6f8) untuk background body */
+body {
+  background-color: #f4f6f8;
+  padding: 40px 20px;
+  color: #333333;
+}
+
+/* BAB 6: WADAH UTAMA (CONTAINER) */
+.product-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* BAB 6: UKURAN KARTU PRODUK (%) */
+.product-card {
+  width: 31%; /* Lebar relatif dalam persentase (%) */
+  
+  /* Format Warna 2: RGB (rgb) untuk background kartu */
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  
+  /* Format Warna 3: HSL (hsl) untuk box-shadow */
+  box-shadow: 0 4px 15px hsl(210, 10%, 85%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* BAB 6: GAMBAR PRODUK (WIDTH 100% & HEIGHT PX) */
+.product-img {
+  width: 100%;
+  height: 180px; /* Tinggi tetap dalam px */
+  object-fit: cover;
+  background-color: #e0e0e0; /* Placeholder warna */
+  display: block;
+}
+
+/* Detail Konten */
+.product-details {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222222;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(145, 63%, 32%); /* Menggunakan Format HSL */
+  margin-bottom: 16px;
+}
+
+/* BAB 5: BADGE DISKON (RGBA TRANSPARAN) */
+.badge-discount {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  
+  /* Menggunakan RGBA transparan */
+  background-color: rgba(235, 59, 90, 0.85); 
+  color: #ffffff;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
+}
+
+/* BAB 5: TOMBOL & HOVER (HSL VARIASI TERANG/GELAP) */
+.btn-add-to-cart {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  
+  /* Warna Utama Tombol: HSL dasar */
+  background-color: hsl(25, 99%, 50%); 
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: auto;
+}
+
+/* Efek Hover: Menurunkan lightness HSL agar lebih gelap */
+.btn-add-to-cart:hover {
+  background-color: hsl(20, 82%, 50%); 
+}
+
+/* Responsif Layar Kecil (Mobile) */
+@media (max-width: 600px) {
+  .product-container {
+    flex-direction: column;
+  }
+  .product-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
