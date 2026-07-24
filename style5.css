@@ -1,0 +1,116 @@
+/* UNIVERSAL SELECTOR & BOX-SIZING */
+* {
+  box-sizing: border-box;
+}
+
+/* KETERANGAN PERHITUNGAN LEBAR TOTAL KARTU (BOX MODEL):
+  --------------------------------------------------------------------------
+  Elemen: .kartu-santri
+  - width           : 300px (lebar total area kotak karena box-sizing: border-box)
+  - padding         : 20px
+  - border          : 2px
+
+  Jika DIHITUNG MANUAL (tanpa box-sizing atau standar Box Model lama):
+  Content width     = width - (padding-left + padding-right) - (border-left + border-right)
+                    = 300px - (20px + 20px) - (2px + 2px)
+                    = 300px - 40px - 4px = 256px
+  
+  Total Lebar Tampak = Content (256px) + Padding (40px) + Border (4px) = 300px.
+  *Catatan: Margin (15px di kiri & kanan) memberikan jarak antar-kartu sebesar 30px total.
+*/
+
+/* Bab 1: Komentar CSS Tambahan untuk penataan dasar tampilan */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9; /* Bab 5: Format Warna HEX */
+  margin: 0;
+  padding: 40px 20px;
+}
+
+/* Bab 6: Max-width pada container pembungkus seluruh kartu */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* A. BOX MODEL PADA KARTU (FAKTOR UTAMA) */
+.kartu-santri {
+  /* Box Model Components */
+  width: 300px;                   /* 1. width */
+  padding: 20px;                  /* 2. padding di dalam kartu */
+  border: 2px solid #333333;      /* 3. border yang membungkus */
+  margin: 15px;                   /* 4. margin antar kartu */
+  
+  /* Styling Tambahan */
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bab 5: Format Warna RGBA */
+  text-align: center;
+}
+
+/* Bab 7: Background-color pada salah satu bagian kartu (Area Avatar) */
+.avatar-header {
+  background-color: #e8f5e9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.avatar-icon {
+  font-size: 40px;
+}
+
+/* Bab 2: Element Selector untuk heading & paragraf di dalam kartu */
+h3 {
+  margin: 10px 0 5px 0;
+  color: #2c3e50;
+}
+
+/* Bab 2: Kombinasi Class Selector (.info-kelas) */
+.info-kelas {
+  font-size: 14px;
+  color: #7f8c8d;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.deskripsi {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Tombol "Lihat Detail" dengan padding khusus */
+.btn-detail {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  
+  /* Padding khusus tombol (berbeda dari padding kartu) */
+  padding: 10px 20px; 
+  
+  cursor: pointer;
+  
+  /* Penerapan perbaikan dari Studi Kasus Bab 4 */
+  border-radius: 8px;
+}
+
+.btn-detail:hover {
+  background-color: #1b5e20;
+}
+
+/* ANALISIS KESALAHAN KODE (STUDI KASUS BAB 4)
+   Potongan Kode Asal:
+   .kartu-tombol
+     border-radius 8px
+     padding: 8px 16px 
+
+   Kesalahan yang ditemukan:
+   1. Lupa tanda titik dua ( : ) pada properti `border-radius`. 
+      Seharusnya: `border-radius: 8px;`
+   2. Lupa titik koma ( ; ) di akhir baris properti `border-radius 8px`.
+   3. Lupa titik koma ( ; ) di akhir baris properti `padding: 8px 16px`.
+   4. Lupa tanda kurung kurawal buka dan tutup `{ }` untuk membungkus blok deklarasi CSS.*/
