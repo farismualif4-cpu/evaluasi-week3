@@ -1,0 +1,173 @@
+/* RESET & DASAR UTAMA */
+
+/* Ketentuan: Applied box-sizing: border-box */
+/* Ketentuan Selektor: Element Selector (*) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: #2c3e50; /* Format Warna 1: HEX */
+  line-height: 1.6;
+}
+
+
+/* SEKSI 1: HERO SECTION (Parallax) */
+
+/* Ketentuan Selektor: ID Selector (#hero) */
+#hero {
+  /* Ketentuan Dimensi: Menggunakan satuan vh & tinggi jelas */
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff; /* Format Warna 1: HEX */
+
+  /* Sumber Gambar Eksternal: Unsplash (Foto Suasana Perpustakaan / Kitab) */
+  /* Ketentuan Background & Bonus:
+     1. Overlay transparan RGBA di atas gambar (Bonus Tantangan)
+     2. background-attachment: fixed (Efek Parallax)
+     3. background-size: cover
+     4. background-position diatur eksplisit (center center)
+     5. background-repeat: no-repeat
+  */
+  background-image: linear-gradient(rgba(18, 53, 36, 0.75), rgba(18, 53, 36, 0.75)), 
+                    url('https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1200');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Ketentuan Selektor: Class Selector (.hero-content) */
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+
+/* SEKSI 2: SKILL SECTION (Pola Berulang) */
+
+.skills-section {
+  width: 100%;
+  height: auto;
+  min-height: 520px; /* Ketentuan Dimensi: Tinggi jelas */
+  padding: 80px 20px;
+  text-align: center;
+
+  /* Ketentuan Background:
+     1. background-repeat: repeat-x (Penggunaan sengaja: pola motif pita diulang horizontal di bagian atas)
+     2. background-position diatur eksplisit (top left)
+     3. Shorthand background digunakan di sini
+  */
+  /* Sumber Gambar Eksternal: SVG Pattern Geometric Data URL */
+  background: hsl(150, 20%, 96%) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0L24 12L12 24L0 12Z" fill="%232e7d32" opacity="0.15"/></svg>') top left repeat-x;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 45px;
+  color: hsl(150, 60%, 15%); /* Format Warna 2: HSL */
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Bonus Tantangan: Variasi warna latar dari warna dasar HSL Hijau Islami (Terang/Gelap) */
+.card {
+  padding: 30px;
+  border-radius: 10px;
+  width: 280px;
+  background-color: hsl(150, 30%, 98%); /* Base / Normal (Terang) */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-dark {
+  background-color: hsl(150, 30%, 88%); /* Versi Lebih Gelap */
+}
+
+.card-light {
+  background-color: hsl(150, 30%, 93%); /* Versi Sedang */
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: hsl(160, 66%, 30%); /* HSL Gelap untuk Judul Card */
+}
+
+
+/* SEKSI 3: CONTACT SECTION (Contain + Fallback) */
+
+#contact {
+  width: 100%;
+  height: 420px; /* Ketentuan Dimensi: Tinggi jelas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+
+  /* Sumber Gambar Eksternal: Unsplash (Ornamen / Arsitektur) */
+  /* Ketentuan Background & Bonus Tantangan:
+     1. background-size: contain
+     2. background-color sebagai warna cadangan (fallback) -> #112a1d
+     3. background-position diatur eksplisit (center center)
+  */
+  background-color: #112a1d; /* Fallback Color (HEX) jika gambar terlambat dimuat */
+  background-image: url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=600');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+/* Format Warna 3: RGBA untuk overlay transparan wadah teks kontak */
+.contact-box {
+  background-color: rgba(17, 42, 29, 0.85); /* Overlay Transparan Hijau Gelap */
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-box h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-box p {
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+}
+
+.btn-email {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: hsl(150, 61%, 32%); /* Format Warna: HSL */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.btn-email:hover {
+  background-color: hsl(150, 60%, 25%); /* HSL Versi lebih gelap saat dipilah (hover) */
+}
