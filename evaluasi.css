@@ -1,0 +1,102 @@
+/* Mengatur gaya tampilan kartu informasi santri */
+.kartu-info {
+  background-color: #1ebad6;
+  padding: 20px;
+}
+
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+}
+
+/* ID Selector */
+#judul-soal-2 {
+  color: #354f68;
+}
+
+/* Class Selector */
+.kegiatan {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Multiple Class Selector (.kegiatan dan .penting) */
+.kegiatan.penting {
+  background-color: #ffeaa7;
+  font-weight: bold;
+}
+
+/* Versi CSS yang sudah diperbaiki */
+.kotak-error {
+  color: white;             /* Perbaikan: penulisan 'color' (bukan collor) */
+  background-color: steelblue; /* Perbaikan: 'background-color' (bukan colour) */
+  padding: 16px;
+  border-radius: 8px;       /* Perbaikan: menambah titik dua ':' yang hilang */
+}                          /* Perbaikan: menambah titik '.' pada selektor .kotak-error */
+
+.warna-1, .warna-2, .warna-3, .warna-4, .warna-overlay {
+  width: 150px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+/* 1. Color Name */
+.warna-1 {
+  background-color: crimson;
+}
+
+/* 2. HEX */
+.warna-2 {
+  background-color: #2ecc71;
+}
+
+/* 3. RGB */
+.warna-3 {
+  background-color: rgb(52, 152, 219);
+}
+
+/* 4. HSL */
+.warna-4 {
+  background-color: hsl(280, 60%, 50%);
+}
+
+/* 5. Transparansi (RGBA / HSLA) */
+.warna-overlay {
+  background-color: rgba(231, 76, 60, 0.5);
+}
+
+.hero {
+  height: 50vh;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-image: url(../mountainous-landscape-with-fog.jpg);
+  background-size: cover;
+  background-position: center;
+  
+  /* Memosisikan teks judul di tengah elemen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h2 {
+  color: white;
+}
+
+.kartu-akhir {
+  /* Mengatur lebar area konten menjadi 250 pixel */
+  width: 250px;
+  
+  /* Ruang dalam antara konten dan garis tepi sebesar 20 pixel */
+  padding: 20px;
+  
+  /* Garis tepi tebal 3 pixel, bertipe solid, dengan warna #2c3e50 */
+  border: 3px solid #2c3e50;
+  
+  /* Jarak luar 30 pixel (atas-bawah) dan otomatis di tengah secara horizontal (kiri-kanan) */
+  margin: 30px auto;
+  
+  /* Memastikan total lebar elemen tetap sesuai dengan properti 'width' yang ditentukan */
+  box-sizing: border-box;
+}
